@@ -51,8 +51,10 @@ public:
         if (board[row_column_index[0]][row_column_index[1]] == 'X' || board[row_column_index[0]][row_column_index[1]] == 'O')
             return 1;
         else
+        {
             board[row_column_index[0]][row_column_index[1]] = inp;
-        return 0;
+            return 0;
+        }
     }
     void decide_winner()
     {
@@ -122,16 +124,17 @@ int gameplay()
                  << endl;
             continue;
         }
+
         game.draw_board();
         if (i > 3)
-        {
             game.decide_winner();
-            if (game.game_status)
-            {
-                cout << "<< Thanks For Playing!! >>" << endl;
-                break;
-            }
+
+        if (game.game_status)
+        {
+            cout << "<< Thanks For Playing!! >>" << endl;
+            break;
         }
+
         i++;
     }
     return 1;
@@ -146,6 +149,7 @@ int main()
         {
             cout << endl
                  << "Press [SPACE] to play again | Press [ENTER] to exit!" << endl;
+            fflush(stdin);
             cin >> key;
             if (key == ' ')
                 continue;
