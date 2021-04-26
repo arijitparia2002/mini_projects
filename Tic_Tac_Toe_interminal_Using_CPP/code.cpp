@@ -68,6 +68,8 @@ public:
 
             else if (board[0][0] == board[1][1] && board[1][1] == board[2][2])
                 win_char = board[1][1];
+            else if (board[0][2] == board[1][1] && board[1][1] == board[2][0])
+                win_char = board[1][1];
         }
 
         if (win_char == 'X')
