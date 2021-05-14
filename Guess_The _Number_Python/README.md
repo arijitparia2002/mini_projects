@@ -1,5 +1,5 @@
 <h1>Guess The Number </h1>
-<p1>It's a simple game made using python language, you can play it in the terminal.</p1><br>
+<p1><b>It's a simple game made using python language, you can play it in the terminal.</b></p1><br><br>
 <ul>
   <li>First the range of the number to guess will be taken from the user./li>
   <li>Greater the range you chose greater will be your SCORE.</li>
